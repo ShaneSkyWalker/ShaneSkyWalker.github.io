@@ -4,33 +4,11 @@ jsproxy_config({
 
   // 节点配置
   node_map: {
-    'aliyun-hk': {
-      label: '轻量云-香港',
+    'vultr': {
+      label: 'vultr',
       lines: [
         // 多条线路，负载均衡系统会从其中选一条
-        'node-aliyun-hk-0.etherdream.com:8443',
-        'node-aliyun-hk-1.etherdream.com:8443'
-      ]
-    },
-    'aliyun-sg': {
-      label: '轻量云-新加坡',
-      lines: [
-        'node-aliyun-sg.etherdream.com:8443'
-      ]
-    },
-    'bwh-la': {
-      label: '搬瓦工-洛杉矶',
-      lines: [
-        'node-bwh-la.etherdream.com:8443'
-      ]
-    },
-    'cfworker': {
-      label: 'Cloudflare Worker',
-      hidden: true,
-      lines: [
-        // 实验中...
-        // 参考 https://github.com/EtherDream/jsproxy/tree/master/cf-worker
-        'node-cfworker.etherdream.com:8443'
+        '155.138.232.49:9099'
       ]
     }
   },
@@ -49,7 +27,7 @@ jsproxy_config({
    * 静态资源 CDN 地址
    * 用于加速 `assets` 目录中的资源访问
    */
-  assets_cdn: 'https://cdn.jsdelivr.net/gh/zjcqoo/zjcqoo.github.io@master/assets/',
+  // assets_cdn: 'https://cdn.jsdelivr.net/gh/zjcqoo/zjcqoo.github.io@master/assets/',
 
   // 本地测试时打开，否则访问的是线上的
   // assets_cdn: 'assets/',
